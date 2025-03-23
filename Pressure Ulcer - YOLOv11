@@ -1,0 +1,14 @@
+# Pressure Ulcer
+# Model: YOLOv11
+# import the inference-sdk
+from inference_sdk import InferenceHTTPClient
+
+# initialize the client
+CLIENT = InferenceHTTPClient(
+    api_url="https://detect.roboflow.com",
+    api_key="kwXwccILmPRWqpsuyyzL"
+)
+
+# infer on a local image
+result = CLIENT.infer("YOUR_IMAGE.jpg", model_id="pressure-wounds-v11/3")
+
