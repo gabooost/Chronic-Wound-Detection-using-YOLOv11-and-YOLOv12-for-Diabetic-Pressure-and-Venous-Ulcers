@@ -1,0 +1,13 @@
+# Dataset: Pressure Ulcers
+# Model: YOLOv12
+# import the inference-sdk
+from inference_sdk import InferenceHTTPClient
+
+# initialize the client
+CLIENT = InferenceHTTPClient(
+    api_url="https://detect.roboflow.com",
+    api_key="sT6RCkwM9GhPbYuyhvGk"
+)
+
+# infer on a local image
+result = CLIENT.infer("YOUR_IMAGE.jpg", model_id="-thsbcs1-capstone-dry-run-wue5b/1")
